@@ -1,0 +1,26 @@
+body {
+    background-color: white;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f9a825;
+}
+
+.søkefelt {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.søkefelt .ikon {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+}
+
+.søkefelt input {
+    padding-left: 36px;
+}
