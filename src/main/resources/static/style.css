@@ -61,14 +61,13 @@ header {
     filter: invert(1);
 }
 
-
 /* Navigasjonsbar */
-/*nav {
+nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 10px 25px;
-    background-color: #141414;
+    background-color: #262626;
     border-bottom: 1px solid #333;
     gap: 20px;
 }
@@ -90,8 +89,8 @@ nav a {
     filter: invert(1);
 }
 
-/* Knapper */
-/*.logginn, .opprett {
+/* Innlogging */
+.logginn, .opprett {
     background: transparent;
     color: white;
     border: none;
@@ -105,5 +104,3 @@ nav a {
     padding: 6px 12px;
     border-radius: 6px;
 }
-
- */
