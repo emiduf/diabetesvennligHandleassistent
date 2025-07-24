@@ -17,7 +17,7 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     color: #f5993d;
 }
@@ -25,15 +25,16 @@ header {
 .søkefelt {
     display: flex;
     align-items: center;
-    background-color: #262626;
+    background-color: white;
     padding: 5px 10px;
     border-radius: 5px;
+    border: 1px solid #e6e6e6;
 }
 
 .søkefelt .ikon {
-    width: 18px;
+    width: 20px;
     margin-right: 8px;
-    filter: invert(1);
+    filter: invert(0);
 }
 
 .søkefelt input.søk {
@@ -48,8 +49,9 @@ header {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: transparent;
-    color: white;
+    font-size: 16px;
+    background-color: white;
+    color: black;
     border: 1px solid #e6e6e6;
     padding: 6px 12px;
     border-radius: 6px;
@@ -57,8 +59,8 @@ header {
 }
 
 .kurv .ikon {
-    width: 18px;
-    filter: invert(1);
+    width: 20px;
+    filter: invert(0);
 }
 
 /* Navigasjonsbar */
@@ -80,21 +82,21 @@ nav > div {
 
 nav a {
     text-decoration: none;
-    color: white;
-    font-size: 14px;
+    color: black;
+    font-size: 16px;
 }
 
 .ikon {
-    width: 16px;
-    filter: invert(1);
+    width: 20px;
+    filter: invert(0);
 }
 
 /* Innlogging */
 .logginn, .opprett {
     background: transparent;
-    color: white;
+    color: black;
     border: none;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
 }
 
