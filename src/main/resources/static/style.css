@@ -1,8 +1,8 @@
 /* Generelt */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0d0d0d;
+    font-family: Inter, sans-serif;
+    background-color: #f8f8ed;
     color: white;
 }
 
@@ -12,14 +12,14 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 15px 25px;
-    background-color: #1a1a1a;
-    border-bottom: 1px solid #333;
+    background-color: #f8f8ed;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: orange;
+    color: #f5993d;
 }
 
 .søkefelt {
@@ -50,7 +50,7 @@ header {
     gap: 8px;
     background-color: transparent;
     color: white;
-    border: 1px solid #333;
+    border: 1px solid #e6e6e6;
     padding: 6px 12px;
     border-radius: 6px;
     cursor: pointer;
@@ -67,8 +67,8 @@ nav {
     align-items: center;
     justify-content: flex-start;
     padding: 10px 25px;
-    background-color: #262626;
-    border-bottom: 1px solid #333;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
     gap: 20px;
 }
 
@@ -99,7 +99,7 @@ nav a {
 }
 
 .opprett {
-    background-color: orange;
+    background-color: #f5993d;
     color: black;
     padding: 6px 12px;
     border-radius: 6px;
