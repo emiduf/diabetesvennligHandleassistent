@@ -83,7 +83,7 @@ nav {
 nav > div {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
 }
 
 nav a {
@@ -118,7 +118,7 @@ nav a {
     background-color: white;
     display: none;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 300px;
     z-index: 1000;
 }
 
@@ -130,7 +130,43 @@ nav a {
 
 .kategori-meny a:hover {
     background-color: white;
-    color:orange;
+    color:#f5993d;
+}
+
+.oppskrifter, .oppskrift-knapp {
+    text-decoration: none;
+    background: transparent;
+    color: black;
+    font-size: 16px;
+    border: none;
+}
+
+/* Oppskrift-meny */
+.oppskrifter {
+    position: relative;
+    cursor: pointer;
+}
+
+.oppskrifter-meny {
+    position: absolute;
+    top: 100%
+    left: 0;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    min-width: 300px;
+    z-index: 1000;
+}
+
+.oppskrifter-meny a{
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.oppskrifter-meny a:hover {
+    background-color: white;
+    color:#f5993d;
 }
 
 .innlogging {
