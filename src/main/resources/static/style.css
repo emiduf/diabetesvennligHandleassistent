@@ -112,15 +112,15 @@ nav a {
 }
 
 .kategori-meny {
-    position: absolute; /*plasseres i forhold til nærmeste relative container*/
-    top: 140%; /*plasseres rett under knappen*/
+    position: fixed; /*plasseres i forhold til nærmeste relative container*/
+    top: 121px;
     left: 0; /*starter helt til venstre*/
-    width: 100vw; /*fyller hele bredden i visningsvinduet*/
+    width: 100vw; /*fyller hele bredden i vinduet*/
     background-color: white;
     display: none; /*skjules som standard, vises mes JS*/
     flex-direction: row; /*legger lenkene ved siden av hverandre*/
     justify-content: center; /*sentrerer innholdet horisontalt*/
-    gap: 20px /*avstand mellom lenkene*/
+    gap: 20px; /*avstand mellom lenkene*/
     padding: 20px 0; /*luft over og under lenkene*/
     z-index: 1000; /*sørger for at menyen vises over andre elementer*/
 }
@@ -158,7 +158,7 @@ nav a {
 
 .oppskrifter-meny {
     position: absolute;
-    top: 100%
+    top: 121%;
     left: 0;
     background-color: white;
     display: none;

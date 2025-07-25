@@ -1,31 +1,34 @@
 //Kategorier
 document.addEventListener('DOMContentLoaded', function() {
-    const knapp = document.getElementById('kategorier-knapp');
-    const meny = document.getElementById('kategori-meny');
+    const katKnapp = document.getElementById('kategorier-knapp');
+    const katMeny = document.getElementById('kategori-meny');
 
-    knapp.addEventListener('click', function() {
-        meny.style.display = meny.style.display === 'flex' ? 'none' : 'flex';
+    katKnapp.addEventListener('click', function(event) {
+        event.stopPropagation();
+        katMeny.style.display = katMeny.style.display === 'flex' ? 'none' : 'flex';
     });
 
     //Lukker menyen hvis man klikker utenfor
     document.addEventListener('click', function (e) {
-        if (!document.getElementById('kategorier').contains(e.target))
-            meny.style.display = 'none';
+        if (!katKnapp.contains(e.target) && !katMeny.contains(e.target))
+            katMeny.style.display = 'none';
     });
 });
 
 //Oppskrifter
 document.addEventListener('DOMContentLoaded', function() {
-    const knapp = document.getElementById('oppskrifter-knapp');
-    const meny = document.getElementById('oppskrift-meny');
+    const oppKnapp = document.getElementById('oppskrifter-knapp');
+    const oppMeny = document.getElementById('oppskrift-meny');
 
-    knapp.addEventListener('click', function() {
-        meny.style.display = meny.style.display === 'flex' ? 'none' : 'flex';
+    oppKnapp.addEventListener('click', function(event) {
+        event.stopPropagation();
+        oppMeny.style.display = oppMeny.style.display === 'flex' ? 'none' : 'flex';
     })
 
     //Lukker menyen hvis man klikker utenfor
     document.addEventListener('click', function(e) {
-        if (!document.getElementById('oppskrifter').contains(e.target))
-            meny.style.display = 'none';
+        if (!oppKnapp.contains(e.target) && !oppMeny.contains(e.target)) {
+            oppMeny.style.display = 'none';
+        }
     });
 });
