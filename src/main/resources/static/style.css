@@ -10,7 +10,8 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 20px; /*avstand mellom logo, søk og kurv */
     padding: 15px 25px;
     background-color: #f8f8ed;
     border-bottom: 1px solid #e6e6e6;
@@ -23,16 +24,17 @@ header {
 }
 
 .søkefelt {
+    width: 250px;
     display: flex;
     align-items: center;
     background-color: white;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid #e6e6e6;
 }
 
 .søkefelt .ikon {
-    width: 20px;
+    width: 25px;
     margin-right: 8px;
     filter: invert(0);
 }
@@ -45,6 +47,10 @@ header {
     font-size: 14px;
 }
 
+.handlekurv {
+    margin-left: auto;
+}
+
 .handlekurv .kurv {
     display: flex;
     align-items: center;
@@ -54,12 +60,12 @@ header {
     color: black;
     border: 1px solid #e6e6e6;
     padding: 6px 12px;
-    border-radius: 6px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 .kurv .ikon {
-    width: 20px;
+    width: 25px;
     filter: invert(0);
 }
 
@@ -91,6 +97,10 @@ nav a {
     filter: invert(0);
 }
 
+.innlogging {
+    margin-left: auto; /* Dytter alt etter denne til høyre */
+}
+
 /* Innlogging */
 .logginn, .opprett {
     background: transparent;
@@ -104,5 +114,5 @@ nav a {
     background-color: #f5993d;
     color: black;
     padding: 6px 12px;
-    border-radius: 6px;
+    border-radius: 10px;
 }
