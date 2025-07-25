@@ -112,22 +112,31 @@ nav a {
 }
 
 .kategori-meny {
-    position: absolute;
-    top: 100%;
-    left: 0;
+    position: absolute; /*plasseres i forhold til nærmeste relative container*/
+    top: 140%; /*plasseres rett under knappen*/
+    left: 0; /*starter helt til venstre*/
+    width: 100vw; /*fyller hele bredden i visningsvinduet*/
     background-color: white;
-    display: none;
-    flex-direction: column;
-    min-width: 300px;
-    z-index: 1000;
+    display: none; /*skjules som standard, vises mes JS*/
+    flex-direction: row; /*legger lenkene ved siden av hverandre*/
+    justify-content: center; /*sentrerer innholdet horisontalt*/
+    gap: 20px /*avstand mellom lenkene*/
+    padding: 20px 0; /*luft over og under lenkene*/
+    z-index: 1000; /*sørger for at menyen vises over andre elementer*/
 }
 
+/*stil for lenkene i kategori-menyen*/
 .kategori-meny a {
-    padding: 10px 15px;
-    color: black;
-    text-decoration: none;
+    color: black; /*svart tekstfarge*/
+    text-decoration: none; /*fjerner understrek*/
+    background-color: #e6e6e6;
+    padding: 10px 20px; /*luft inni knappene*/
+    border-radius: 10px; /*avrundede kanter*/
+    font-weight: 500; /*fetere tekst*/
+    white-space: nowrap; /*hindrer at teksten brytes til ny linje*/
 }
 
+/*musepeker over knapp i kategori-meny*/
 .kategori-meny a:hover {
     background-color: white;
     color:#f5993d;
