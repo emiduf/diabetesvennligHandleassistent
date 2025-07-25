@@ -97,6 +97,31 @@ nav a {
     filter: invert(0);
 }
 
+.kategorier, .kategori-knapp {
+    text-decoration: none;
+    background: transparent;
+    color: black;
+    font-size: 16px;
+    border: none;
+}
+
+/* Kategori-meny */
+.kategorier {
+    position: relative;
+    cursor: pointer;
+}
+
+.kategori-meny {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    z-index: 1000;
+}
+
 .innlogging {
     margin-left: auto; /* Dytter alt etter denne til høyre */
 }
