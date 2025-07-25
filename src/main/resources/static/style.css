@@ -122,6 +122,17 @@ nav a {
     z-index: 1000;
 }
 
+.kategori-meny a {
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.kategori-meny a:hover {
+    background-color: white;
+    color:orange;
+}
+
 .innlogging {
     margin-left: auto; /* Dytter alt etter denne til høyre */
 }
