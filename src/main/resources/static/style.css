@@ -117,7 +117,7 @@ nav a {
     left: 0; /*starter helt til venstre*/
     width: 100vw; /*fyller hele bredden i vinduet*/
     background-color: white;
-    display: flex;
+    display: none;
     justify-content: center; /*sentrerer innholdet horisontalt*/
     padding: 80px 0; /*luft over og under lenkene*/
     z-index: 1000; /*sørger for at menyen vises over andre elementer*/
@@ -174,25 +174,50 @@ nav a {
 }
 
 .oppskrifter-meny {
-    position: absolute;
-    top: 121%;
+    position: fixed;
+    top: 121px;
     left: 0;
+    width: 100vw;
     background-color: white;
     display: none;
-    flex-direction: column;
-    min-width: 300px;
+    justify-content: center;
+    padding: 80px 0;
     z-index: 1000;
 }
 
+/*grid layout for innholdet av oppskrifter*/
+.oppskrifter-innhold {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px 40px;
+}
+
+/*stil for lenkene i oppskrifter-meny*/
 .oppskrifter-meny a{
-    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
     color: black;
     text-decoration: none;
+    background-color: #e6e6e6;
+    padding: 10px 200px;
+    border-radius: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-align: center;
+    height: 20px;
+
+    /*setter en usynlig ramme slik at knappene beholder størrelse ved hover*/
+    border: 2px solid transparent;
 }
 
 .oppskrifter-meny a:hover {
     background-color: white;
-    color:#f5993d;
+    color: black;
+    border: 2px solid #e6e6e6;
 }
 
 .innlogging {
