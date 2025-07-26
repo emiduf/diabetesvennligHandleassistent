@@ -220,6 +220,10 @@ nav a {
     border: 2px solid #e6e6e6;
 }
 
+.aktiv-knapp {
+    border-bottom: 3px solid #f5993d;
+}
+
 .innlogging {
     margin-left: auto; /* Dytter alt etter denne til høyre */
 }

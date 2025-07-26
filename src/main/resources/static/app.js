@@ -8,36 +8,46 @@ document.addEventListener('DOMContentLoaded', function() {
     katKnapp.addEventListener('click', function (event) {
         event.stopPropagation();
 
-        //lukk oppskriftsmeny om den er åpen
-        if (oppMeny.style.display === 'flex') {
-            oppMeny.style.display = 'none';
-        }
+        //åpne/lukk kategorier
+        const visKategori = katMeny.style.display !== 'flex';
+        katMeny.style.display = visKategori ? 'flex' : 'none';
 
-        //toggle kategori-meny
-        katMeny.style.display = katMeny.style.display === 'flex' ? 'none' : 'flex';
+        //lukk oppskrifter
+        oppMeny.style.display = 'none';
+
+        //oppdater strek
+        katKnapp.classList.toggle('aktiv-knapp', visKategori);
+        oppKnapp.classList.remove('aktiv-knapp');
     });
 
-    //klikk på oppskrifter
     oppKnapp.addEventListener('click', function (event) {
         event.stopPropagation();
 
-        //lukk kategori-meny om den er åpen
-        if (katMeny.style.display === 'flex') {
-            katMeny.style.display = 'none';
-        }
+        //åpne/lukk oppskrifter
+        const visOppskrift = oppMeny.style.display !== 'flex';
+        oppMeny.style.display = visOppskrift ? 'flex' : 'none';
 
-        //toggle oppskrift-meny
-        oppMeny.style.display = oppMeny.style.display === 'flex' ? 'none' : 'flex';
+        //lukk kategorier
+        katMeny.style.display = 'none';
+
+        //oppdater strek
+        oppKnapp.classList.toggle('aktiv-knapp', visOppskrift);
+        katKnapp.classList.remove('aktiv-knapp');
     });
 
-    //klikk utenfor lukker begge menyer
-    document.addEventListener('click', function(e) {
+    // lukk begge når man klikker utenfor
+    document.addEventListener('click', function (e) {
         if (!katKnapp.contains(e.target) && !katMeny.contains(e.target)) {
             katMeny.style.display = 'none';
+            katKnapp.classList.remove('aktiv-knapp');
         }
-
         if (!oppKnapp.contains(e.target) && !oppMeny.contains(e.target)) {
             oppMeny.style.display = 'none';
+            oppKnapp.classList.remove('aktiv-knapp');
         }
     });
 });
+
+
+
+
