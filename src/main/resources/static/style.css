@@ -135,6 +135,8 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
+    gap: 10px;
 
     color: black; /*svart tekstfarge*/
     text-decoration: none; /*fjerner understrek*/
@@ -153,7 +155,7 @@ nav a {
 /*musepeker over knapp i kategori-meny*/
 .kategori-meny a:hover {
     background-color: white;
-    color:#f5993d;
+    color:black;
     border: 2px solid #e6e6e6;
 }
 
