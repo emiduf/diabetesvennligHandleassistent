@@ -188,7 +188,7 @@ nav a {
 /*grid layout for innholdet av oppskrifter*/
 .oppskrifter-innhold {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px 40px;
 }
 
@@ -203,7 +203,7 @@ nav a {
     color: black;
     text-decoration: none;
     background-color: #e6e6e6;
-    padding: 10px 200px;
+    padding: 10px 150px;
     border-radius: 10px;
     font-weight: 500;
     white-space: nowrap;
