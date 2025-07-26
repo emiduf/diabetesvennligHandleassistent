@@ -117,12 +117,17 @@ nav a {
     left: 0; /*starter helt til venstre*/
     width: 100vw; /*fyller hele bredden i vinduet*/
     background-color: white;
-    display: none; /*skjules som standard, vises mes JS*/
-    flex-direction: row; /*legger lenkene ved siden av hverandre*/
+    display: flex;
     justify-content: center; /*sentrerer innholdet horisontalt*/
-    gap: 20px; /*avstand mellom lenkene*/
-    padding: 20px 0; /*luft over og under lenkene*/
+    padding: 80px 0; /*luft over og under lenkene*/
     z-index: 1000; /*sørger for at menyen vises over andre elementer*/
+}
+
+/*Grid-layout for innholdet av kategori*/
+.kategori-innhold {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /*to kolonner*/
+    gap: 20px 40px;
 }
 
 /*stil for lenkene i kategori-menyen*/
