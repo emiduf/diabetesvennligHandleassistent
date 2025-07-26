@@ -132,19 +132,29 @@ nav a {
 
 /*stil for lenkene i kategori-menyen*/
 .kategori-meny a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: black; /*svart tekstfarge*/
     text-decoration: none; /*fjerner understrek*/
     background-color: #e6e6e6;
-    padding: 10px 20px; /*luft inni knappene*/
+    padding: 10px 200px; /*luft inni knappene*/
     border-radius: 10px; /*avrundede kanter*/
     font-weight: 500; /*fetere tekst*/
     white-space: nowrap; /*hindrer at teksten brytes til ny linje*/
+    text-align: center;
+    height: 20px;
+
+    /*setter en usynlig ramme slik at knappene beholder størrelse*/
+    border: 2px solid transparent;
 }
 
 /*musepeker over knapp i kategori-meny*/
 .kategori-meny a:hover {
     background-color: white;
     color:#f5993d;
+    border: 2px solid #e6e6e6;
 }
 
 .oppskrifter, .oppskrift-knapp {
