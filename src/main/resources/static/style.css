@@ -243,3 +243,14 @@ nav a {
     padding: 6px 12px;
     border-radius: 10px;
 }
+
+/*>>>>>>>>Pålegg-siden*/
+.paalegg, .paaleggh1 {
+    margin: 30px 25px;
+    color: black;
+}
+
+.paaleggkat {
+    margin: 10px 0;
+}
+
