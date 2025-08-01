@@ -1,4 +1,4 @@
-/* Generelt */
+/* ==== Generelt ==== */
 body {
     margin: 0;
     font-family: Inter, sans-serif;
@@ -6,7 +6,7 @@ body {
     color: white;
 }
 
-/* Header */
+/* ==== Header ==== */
 header {
     display: flex;
     align-items: center;
@@ -23,6 +23,7 @@ header {
     color: #f5993d;
 }
 
+/* Søkefelt */
 .søkefelt {
     width: 250px;
     display: flex;
@@ -33,12 +34,13 @@ header {
     border: 1px solid #e6e6e6;
 }
 
+/* Ikon i søkefelt */
 .søkefelt .ikon {
     width: 25px;
     margin-right: 8px;
     filter: invert(0);
 }
-
+ /* Input i søkefelt */
 .søkefelt input.søk {
     background-color: transparent;
     border: none;
@@ -47,6 +49,7 @@ header {
     font-size: 14px;
 }
 
+/* Handlekurv */
 .handlekurv {
     margin-left: auto;
 }
@@ -64,18 +67,19 @@ header {
     cursor: pointer;
 }
 
+/* Ikon i handlekurv */
 .kurv .ikon {
     width: 25px;
     filter: invert(0);
 }
 
-/* Navigasjonsbar */
+/* ====Navigasjonsbar==== */
 nav {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 10px 25px;
-    background-color: #fff;
+    background-color: white;
     border-bottom: 1px solid #e6e6e6;
     gap: 20px;
 }
@@ -97,139 +101,22 @@ nav a {
     filter: invert(0);
 }
 
-.kategorier, .kategori-knapp {
-    text-decoration: none;
-    background: transparent;
-    color: black;
-    font-size: 16px;
+.kategori-knapp,
+.oppskrift-knapp {
+    background: none;
     border: none;
-}
-
-/* Kategori-meny */
-.kategorier {
-    position: relative;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.kategori-meny {
-    position: fixed; /*plasseres i forhold til nærmeste relative container*/
-    top: 121px;
-    left: 0; /*starter helt til venstre*/
-    width: 100vw; /*fyller hele bredden i vinduet*/
-    background-color: white;
-    display: none;
-    justify-content: center; /*sentrerer innholdet horisontalt*/
-    padding: 80px 0; /*luft over og under lenkene*/
-    z-index: 1000; /*sørger for at menyen vises over andre elementer*/
-}
-
-/*Grid-layout for innholdet av kategori*/
-.kategori-innhold {
-    display: grid;
-    grid-template-columns: repeat(2, auto); /*to kolonner*/
-    gap: 20px 40px;
-}
-
-/*stil for lenkene i kategori-menyen*/
-.kategori-meny a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
-
-    color: black; /*svart tekstfarge*/
-    text-decoration: none; /*fjerner understrek*/
-    background-color: #e6e6e6;
-    padding: 10px 200px; /*luft inni knappene*/
-    border-radius: 10px; /*avrundede kanter*/
-    font-weight: 500; /*fetere tekst*/
-    white-space: nowrap; /*hindrer at teksten brytes til ny linje*/
-    text-align: center;
-    height: 20px;
-
-    /*setter en usynlig ramme slik at knappene beholder størrelse*/
-    border: 2px solid transparent;
-}
-
-/*musepeker over knapp i kategori-meny*/
-.kategori-meny a:hover {
-    background-color: white;
-    color:black;
-    border: 2px solid #e6e6e6;
-}
-
-.oppskrifter, .oppskrift-knapp {
-    text-decoration: none;
-    background: transparent;
-    color: black;
-    font-size: 16px;
-    border: none;
-}
-
-/* Oppskrift-meny */
-.oppskrifter {
-    position: relative;
-    cursor: pointer;
-}
-
-.oppskrifter-meny {
-    position: fixed;
-    top: 121px;
-    left: 0;
-    width: 100vw;
-    background-color: white;
-    display: none;
-    justify-content: center;
-    padding: 80px 0;
-    z-index: 1000;
-}
-
-/*grid layout for innholdet av oppskrifter*/
-.oppskrifter-innhold {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 40px;
-}
-
-/*stil for lenkene i oppskrifter-meny*/
-.oppskrifter-meny a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    gap: 10px;
-
-    color: black;
-    text-decoration: none;
-    background-color: #e6e6e6;
-    padding: 10px 150px;
-    border-radius: 10px;
-    font-weight: 500;
-    white-space: nowrap;
-    text-align: center;
-    height: 20px;
-
-    /*setter en usynlig ramme slik at knappene beholder størrelse ved hover*/
-    border: 2px solid transparent;
-}
-
-.oppskrifter-meny a:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid #e6e6e6;
-}
-
-.aktiv-knapp {
-    border-bottom: 3px solid #f5993d;
-}
-
+/* Påloggingsknapper*/
 .innlogging {
     margin-left: auto; /* Dytter alt etter denne til høyre */
 }
 
 /* Innlogging */
-.logginn, .opprett {
+.logginn,
+.opprett {
     background: transparent;
     color: black;
     border: none;
@@ -244,18 +131,18 @@ nav a {
     border-radius: 10px;
 }
 
-/*>>>>>>>>Pålegg-siden*/
-.paalegg, .paaleggh1 {
-    margin: 30px 25px;
+/* ==== Hovedinnhold ==== */
+main.paalegg {
+    padding: 30px 25px;
     color: black;
 }
 
-/*Filter*/
+/* ==== Filterknapp ==== */
 .filter {
-    position: relative;
-    margin: 5px 25px;
+    margin-bottom: 20px;
 }
 
+/* Knapp for å vise/skjule filter */
 .filterknapp {
     display: flex;
     align-items: center;
@@ -269,72 +156,43 @@ nav a {
     cursor: pointer;
 }
 
-.filterknapp .ikon {
-    width: 16px;
-    height: 16px;
-    filter: invert(0);
+/* Når filterknappen er aktiv */
+.filterknapp.aktiv-filter {
+    background-color: #f5993d;
 }
 
+/* Filtermenyen som vises etter klikk*/
 .filtermeny {
-    position: absolute;
-    top: 110%;
-    left: 0;
-    background-color: white;
-    border: 1px solid #e6e6e6;
-    border-radius: 10px;
-    padding: 10px;
-    display: none;
+    display: none; /*skjules som standard*/
     flex-direction: column;
-    gap: 8px;
-    z-index: 999;
-}
-
-.filtermeny.vis {
-    display: flex;
+    gap: 6px;
+    margin-top: 10px;
 }
 
 .filtermeny label {
     display: flex;
     align-items: center;
-    gap: 2px;
-    font-size: 16px;
+    gap: 6px;
+    font-size: 14px;
 }
 
-.aktiv-filter {
-    background-color: #f5993d;
-    color:black;
-}
-
-/*Valgte filter*/
-.valgte-filter {
+/* ==== Produkter ==== */
+.produktliste {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin: 10px 25px;
+    gap: 15px;
 }
 
-.filter-tag {
-    background-color: #f5993d;
-    color: black;
-    padding: 8px 14px;
+/* Stil for produktene */
+.produkt {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #e6e6e6;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
+    min-width: 150px;
+    text-align: center;
 }
 
-.filter-tag button {
-    background: none;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-}
 
-.filter-linje {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1px;
-}
+
 
