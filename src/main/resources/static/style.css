@@ -250,7 +250,15 @@ nav a {
     color: black;
 }
 
-.paaleggkat {
-    margin: 10px 0;
+/*Filter*/
+.filter {
+    margin: 5px 25px;
+}
+
+.filterknapp {
+    color: black;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 10px;
 }
 
