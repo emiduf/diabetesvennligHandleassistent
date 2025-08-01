@@ -7,8 +7,9 @@
 </head>
 
 <body>
+
+<!--header med logo, søkefelt og handlekurv-->
 <header>
-  <!-- logo -->
   <div class="logo">Matbutikk - demo</div>
 
   <!-- søkefelt -->
@@ -29,7 +30,7 @@
 
   <!--Navigasjonsbar -->
   <nav>
-    <!--Kategorier-->
+    <!--Kategoriknapp-->
     <div class="kategorier" id="kategorier">
       <button id= "kategorier-knapp" class="kategori-knapp">
         <img src="ikoner/apple.svg" alt="Kategorier" class="ikon">
@@ -37,7 +38,7 @@
       </button>
     </div>
 
-    <!--Oppskrifter-->
+    <!--Oppskriftsknapp-->
     <div class="oppskrifter" id="oppskrifter">
       <button id="oppskrifter-knapp" class="oppskrift-knapp">
         <img src="ikoner/chef-hat.svg" alt="Oppskrifter" class="ikon">
@@ -52,70 +53,31 @@
     </div>
   </nav>
 
-<!--Kategori-meny -->
-<div class="kategori-meny" id="kategori-meny">
-  <div class="kategori-innhold">
-    <a href="paalegg.html">
-      <img src="ikoner/ham.svg" alt="Pålegg" class="ikon">
-      Pålegg
-    </a>
-    <a href="#">
-      <img src="ikoner/glass-water.svg" alt="Drikke" class="ikon">
-      Drikke
-    </a>
-    <a href="#">
-      <img src="ikoner/banana.svg" alt="FruktogGrønt" class="ikon">
-      Frukt og grønt
-    </a>
-    <a href="#">
-      <img src="ikoner/egg.svg" alt="Meieri" class="ikon">
-      Meierei, ost og egg
-    </a>
-    <a href="#">
-      <img src="ikoner/fish.svg" alt="Fisk" class="ikon">
-      Fisk og sjømat
-    </a>
-    <a href="#">
-      <img src="ikoner/ice-cream-cone.svg" alt="Iskrem" class="ikon">
-      Iskrem, dessert og kjeks
-    </a>
-  </div>
-</div>
+<!--tomme menyer for kategorier og oppskrifter-->
+<div class="kategori-meny" id="kategori-meny"></div>
+<div class="oppskrifter-meny" id="oppskrifter-meny"></div>
 
-<!--Oppskrifter-meny-->
-<div class="oppskrifter-meny" id="oppskrift-meny">
-  <div class="oppskrifter-innhold">
-    <a href="#">
-      <img src="ikoner/heart-pulse.svg" alt="Diabetesvennlig" class="ikon">
-      Diabetesvennlige oppskrifter
-    </a>
-    <a href="#">
-      <img src="ikoner/vegan.svg" alt="Vegansk" class="ikon">
-      Veganske oppskrifter
-    </a>
-  </div>
-</div>
-
-<!--Innhold for påleggsiden-->
+<!--innhold for påleggsiden-->
 <main class="paalegg">
-  <h1 class="paaleggh1">Pålegg</h1>
 
-  <!--Filterknappen-->
+  <!--overskrift-->
+  <h1>Pålegg</h1>
+
+  <!--Filterknapp-->
   <div class="filter" id="filter">
-    <div class="filter-linje">
     <button class="filterknapp" id="filterknapp">
       Filter
       <img src="ikoner/chevron-down.svg" alt="Filter" class="ikon">
     </button>
-
-    <div class="valgte-filter" id="valgte-filter"></div>
-    </div>
-
-    <div class="filtermeny" id="filtermeny">
-      <label><input type="checkbox">Diabetesvennlig</label>
-      <label><input type="checkbox">Vegansk</label>
-    </div>
   </div>
+
+  <!--liste over produkter-->
+  <section class="produktliste" id="produktliste">
+
+    <div class="produkt" data-diabetesvennlig="true">Kokt skinke</div>
+    <div class="produkt" data-diabetesvennlig="false">Leverpostei</div>
+  </section>
+
 </main>
 
 <script src="app.js"></script>
