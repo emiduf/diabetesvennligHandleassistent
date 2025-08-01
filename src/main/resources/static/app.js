@@ -48,6 +48,93 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+//Filter
+document.addEventListener('DOMContentLoaded', function () {
+    const filterKnapp = document.getElementById('filterknapp');
+    const filterMeny = document.getElementById('filtermeny');
+
+    filterKnapp.addEventListener('click', function (e) {
+        e.stopPropagation();
+        const vises = filterMeny.style.display === 'flex';
+
+        // Vis/skjul meny
+        filterMeny.style.display = vises ? 'none' : 'flex';
+
+        // Legg til/fjern aktiv stil
+        if (vises) {
+            filterKnapp.classList.remove('aktiv-filter');
+        } else {
+            filterKnapp.classList.add('aktiv-filter');
+        }
+    });
+
+    // Klikk utenfor = lukk meny og fjerner farge
+    document.addEventListener('click', function (e) {
+        if (!filterMeny.contains(e.target) && !filterKnapp.contains(e.target)) {
+            filterMeny.style.display = 'none';
+            filterKnapp.classList.remove('aktiv-filter');
+        }
+    });
+});
+
+//Aktive filtre
+document.addEventListener('DOMContentLoaded', function () {
+    const filterKnapp = document.getElementById('filterknapp');
+    const filterMeny = document.getElementById('filtermeny');
+    const filterContainer = document.getElementById('valgte-filter');
+    const checkboxes = filterMeny.querySelectorAll('input[type="checkbox"]');
+
+    // Toggle meny
+    filterKnapp.addEventListener('click', function () {
+        filterMeny.classList.toggle('vis');
+        filterKnapp.classList.toggle('aktiv-filter');
+    });
+
+    // Håndter sjekkbokser
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function () {
+            const labelText = this.parentNode.textContent.trim();
+
+            if (this.checked) {
+                const tag = document.createElement('div');
+                tag.className = 'filter-tag';
+                tag.setAttribute('data-filter', labelText);
+                tag.innerHTML = `
+          ${labelText}
+          <button type="button" class="fjern-filter" aria-label="Fjern filter">&times;</button>
+        `;
+                filterContainer.appendChild(tag);
+            } else {
+                const tag = filterContainer.querySelector(`[data-filter="${labelText}"]`);
+                if (tag) tag.remove();
+            }
+
+            // Hvis minst én er valgt → behold oransje knapp
+            const noenValgt = [...checkboxes].some(cb => cb.checked);
+            filterKnapp.classList.toggle('aktiv-filter', noenValgt);
+        });
+    });
+
+    // Fjern tag med X
+    filterContainer.addEventListener('click', function (e) {
+        if (e.target.classList.contains('fjern-filter')) {
+            const tag = e.target.closest('.filter-tag');
+            const text = tag.getAttribute('data-filter');
+
+            checkboxes.forEach(cb => {
+                if (cb.parentNode.textContent.trim() === text) cb.checked = false;
+            });
+
+            tag.remove();
+
+            // Oppdater knappens farge
+            const noenValgt = [...checkboxes].some(cb => cb.checked);
+            filterKnapp.classList.toggle('aktiv-filter', noenValgt);
+        }
+    });
+});
+
+
 
 
 
