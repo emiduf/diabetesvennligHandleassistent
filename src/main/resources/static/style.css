@@ -139,7 +139,11 @@ main.paalegg {
 
 /* ==== Filterknapp ==== */
 .filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 20px;
+    position: relative;
 }
 
 /* Knapp for å vise/skjule filter */
@@ -156,24 +160,53 @@ main.paalegg {
     cursor: pointer;
 }
 
-/* Når filterknappen er aktiv */
-.filterknapp.aktiv-filter {
-    background-color: #f5993d;
-}
-
 /* Filtermenyen som vises etter klikk*/
 .filtermeny {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    padding: 10px;
     display: none; /*skjules som standard*/
-    flex-direction: column;
-    gap: 6px;
-    margin-top: 10px;
+    z-index: 100;
 }
 
 .filtermeny label {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 14px;
+    font-size: 16px;
+}
+
+.filterknapp.aktive-filter {
+    background-color: #f5993d;
+    color: black;
+}
+
+.filter-tagg {
+    background-color: #f5993d;
+    color: black;
+    padding: 8px 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+}
+
+.filter-tagg button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+}
+
+.aktive-filter {
+    display: flex;
+    gap: 10px;
 }
 
 /* ==== Produkter ==== */

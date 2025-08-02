@@ -64,19 +64,33 @@
   <h1>Pålegg</h1>
 
   <!--Filterknapp-->
-  <div class="filter" id="filter">
+  <div class="filter">
     <button class="filterknapp" id="filterknapp">
       Filter
       <img src="ikoner/chevron-down.svg" alt="Filter" class="ikon">
     </button>
+
+    <!--Aktivt filter-->
+    <div class="aktive-filter" id="aktive-filter"></div>
+
+    <!--Nedtrekksmeny for filter-->
+    <div class="filtermeny" id="filtermeny">
+      <label>
+        <input type="checkbox" id="filter-diabetes">
+        Diabetesvennlig
+      </label>
+    </div>
   </div>
 
+
   <!--liste over produkter-->
+  <!--
   <section class="produktliste" id="produktliste">
 
     <div class="produkt" data-diabetesvennlig="true">Kokt skinke</div>
     <div class="produkt" data-diabetesvennlig="false">Leverpostei</div>
   </section>
+  -->
 
 </main>
 

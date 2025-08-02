@@ -1,36 +1,82 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Hent elementer
     const filterKnapp = document.getElementById('filterknapp');
-    const filterMeny = document.createElement('div');
-    filterMeny.className = 'filtermeny';
-    filterMeny.innerHTML = `
-        <label>
-            <input type="checkbox" id="diabetes-filter">
-            Diabetesvennlig
-        </label>
-    `;
-    filterKnapp.parentNode.appendChild(filterMeny);
-
-    const checkbox = document.getElementById('diabetes-filter');
+    const filterMeny = document.getElementById('filtermeny');
+    const checkbox = document.getElementById('filter-diabetes');
+    const aktiveFilter = document.getElementById('aktive-filter');
     const produkter = document.querySelectorAll('.produkt');
 
-    // Toggle synligheten til menyen
-    filterKnapp.addEventListener('click', () => {
-        filterMeny.style.display = filterMeny.style.display === 'flex' ? 'none' : 'flex';
+    // Åpne/lukke nedtrekksmeny
+    filterKnapp.addEventListener('click', function () {
+        const vises = filterMeny.style.display === 'block';
+        filterMeny.style.display = vises ? 'none' : 'block';
+
+        // Vis orange knapp kun hvis ingen filter er aktivt
+        if (!checkbox.checked) {
+            filterKnapp.classList.toggle('aktiv-filter', !vises);
+        }
     });
 
-    // Vis/skjul produkter avhengig av filteret
-    checkbox.addEventListener('change', () => {
-        const aktiv = checkbox.checked;
+    // Når brukeren klikker på checkbox
+    checkbox.addEventListener('change', function () {
+        if (this.checked) {
+            leggTilTagg();
+            filterKnapp.classList.add('aktiv-filter');
+        } else {
+            fjernTagg();
+            if (filterMeny.style.display !== 'block') {
+                filterKnapp.classList.remove('aktiv-filter');
+            }
+        }
+        filtrerProdukter();
+    });
 
+    // Legg til filter-tagg ved valg
+    function leggTilTagg() {
+        if (!document.querySelector('.filter-tagg')) {
+            const tagg = document.createElement('div');
+            tagg.className = 'filter-tagg';
+            tagg.innerHTML = `
+                Diabetesvennlig
+                <button class="fjern-filter" aria-label="Fjern filter">&times;</button>
+            `;
+            aktiveFilter.appendChild(tagg);
+        }
+
+        // Lukk meny når filter velges
+        filterMeny.style.display = 'none';
+    }
+
+    // Fjern filter-tagg
+    function fjernTagg() {
+        const tagg = document.querySelector('.filter-tagg');
+        if (tagg) tagg.remove();
+    }
+
+    // Klikk på "×" for å fjerne tagg og oppdatere
+    aktiveFilter.addEventListener('click', function (e) {
+        if (e.target.classList.contains('fjern-filter')) {
+            checkbox.checked = false;
+            fjernTagg();
+            filtrerProdukter();
+
+            // Fjern orange bakgrunn hvis meny ikke er åpen
+            if (filterMeny.style.display !== 'block') {
+                filterKnapp.classList.remove('aktiv-filter');
+            }
+        }
+    });
+
+    // Filtrer produkter basert på checkbox
+    function filtrerProdukter() {
+        const aktivt = checkbox.checked;
         produkter.forEach(produkt => {
             const erDiabetesvennlig = produkt.dataset.diabetesvennlig === 'true';
-            produkt.style.display = (!aktiv || erDiabetesvennlig) ? 'block' : 'none';
+            produkt.style.display = (aktivt && !erDiabetesvennlig) ? 'none' : 'block';
         });
-
-        // Farge på filterknappen
-        filterKnapp.classList.toggle('aktiv-filter', aktiv);
-    });
+    }
 });
+
 
 
 
