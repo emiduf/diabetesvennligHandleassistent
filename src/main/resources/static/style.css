@@ -222,16 +222,19 @@ main.paalegg {
     padding: 12px;
     border: 1px solid #e6e6e6;
     border-radius: 10px;
-    min-width: 160px;
+    width: 180px;
+    height: 320px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* Bilder av produkter */
 .produktbilde {
-    width: 100%;
-    max-width: 120px;
-    height: auto;
-    border-radius: 8px;
+    width: auto;
+    height: 175px;
+    object-fit: contain;
     margin-bottom: 10px;
 }
 
@@ -240,6 +243,8 @@ main.paalegg {
     font-size: 16px;
     margin: 0 0 6px 0;
     color: black;
+    height: 40px;
+    overflow: hidden;
 }
 
 .produkt p {
