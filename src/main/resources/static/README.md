@@ -38,6 +38,10 @@ Denne løsningen skal effektivisere og gjøre valg av matvarer enklere og trygge
 | Testing (ADTS2310)        | Logikktest av filterfunksjon              |
 | Systemutvikling (DAFE2200)| Planlegging, prototype → kode             |
 
+# Mulig videreutvikling 
+- Oppskrifter basert på valgte matvarer eller diabetesvennlige oppskriftskategori 
+- Flere filtre (lavFODMAP, vegansk, glutenfritt, laktosefritt, lavkarbo, renvare)
+
 # Kom i gang
 1. Last ned prosjektet
 2. Åpne `paalegg.html` i nettleseren
