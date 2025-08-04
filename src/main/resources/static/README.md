@@ -8,7 +8,7 @@ Prosjektet er inspirert av Oda.no og er utviklet som et hobbyprosjekt.
 # Hvorfor dette prosjektet?
 Etter flere år i helsesektoren har jeg sett hvor ofte matbestillinger skjer på vegne av pasienter 
 med diabetes, og det går ofte mye tid på å lese næringsinnhold og ingredienser.
-Denne løsningen skal effektivisere- og gjøre valg av matvarer enklere og tryggere. 
+Denne løsningen skal effektivisere og gjøre valg av matvarer enklere og tryggere. 
 
 # Funksjonalitet 
 - Filter for diabetesvennlige produkter 
